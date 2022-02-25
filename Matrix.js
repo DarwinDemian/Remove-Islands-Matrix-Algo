@@ -165,8 +165,6 @@ const removeIslands = (matrix) => {
     }
   }
   //                     END                        //
-  adjacent;
-  matrix;
   return matrix;
 };
 
@@ -212,4 +210,5 @@ let matrix = [
 //   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 // ];
 
-removeIslands(matrix);
+console.log(matrix)
+console.log(removeIslands(matrix));
