@@ -1,7 +1,5 @@
 const removeIslands = (matrix) => {
   let adjacent = {};
-  let leftBorder = {};
-  let rightBorder = {};
 
   let colLength = matrix.length;
   let rowLength = matrix[0].length;
@@ -23,6 +21,7 @@ const removeIslands = (matrix) => {
           checkRow(col, row + 1, matrix, "right");
         }
       }
+      
 
       if (direction === "left") {
         if (
@@ -125,8 +124,6 @@ const removeIslands = (matrix) => {
       // check each border and search for each adjacent //
       //      check for leftBorder    //
       if (matrix[col][0] === 1) {
-        leftBorder[col] = 0;
-
         // check if there's a [1] to it's right
         if (matrix[col][1] === 1) {
           adjacent[col].push(1);
@@ -136,8 +133,6 @@ const removeIslands = (matrix) => {
 
       //          check for rightBorder       //
       if (matrix[col][rowLength - 1] === 1) {
-        rightBorder[col] = rowLength - 1;
-
         // check if there's a [1] to it's left
         if (matrix[col][rowLength - 2] === 1) {
           adjacent[col].push(rowLength - 2);
@@ -171,16 +166,16 @@ const removeIslands = (matrix) => {
 };
 
 // 5x5
-// let matrix = [
-// [0, 0, 1, 1, 1],
-// [1, 0, 0, 0, 0],
-// [0, 1, 1, 0, 0],
-// [0, 1, 0, 1, 1],
-// [1, 0, 0, 1, 0],
-// ];
+let matrix = [
+  [0, 0, 1, 1, 1],
+  [1, 1, 0, 0, 0],
+  [0, 1, 1, 0, 0],
+  [0, 1, 0, 1, 1],
+  [1, 0, 0, 1, 0],
+];
 
 // let matrix = [
-//   [0, 1, 0, 1, 0, 0]
+  // [0, 1, 0, 1, 0, 0]
 // ]
 
 // let matrix = [
@@ -188,15 +183,15 @@ const removeIslands = (matrix) => {
 // ]
 
 // 7x7
-let matrix = [
-  [1, 1, 0, 0, 0, 0, 0],
-  [0, 1, 0, 0, 0, 0, 0],
-  [0, 1, 1, 1, 0, 0, 0],
-  [0, 0, 0, 1, 1, 0, 0],
-  [0, 0, 0, 0, 1, 0, 0],
-  [0, 0, 0, 0, 1, 1, 0],
-  [0, 0, 0, 0, 0, 0, 0],
-];
+// let matrix = [
+  // [1, 1, 0, 0, 0, 0, 0],
+  // [0, 1, 0, 0, 0, 0, 0],
+  // [0, 1, 1, 1, 0, 0, 0],
+  // [0, 0, 0, 1, 1, 0, 0],
+  // [0, 0, 0, 0, 1, 0, 0],
+  // [0, 0, 0, 0, 1, 1, 0],
+  // [0, 0, 0, 0, 0, 0, 0],
+// ];
 
 // 10x10
 // let matrix = [
