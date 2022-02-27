@@ -165,7 +165,6 @@ const removeIslands = (matrix) => {
     }
   }
   //                     END                        //
-  adjacent;
   return matrix;
 };
 
