@@ -21,7 +21,6 @@ const removeIslands = (matrix) => {
           moveRow(col, row + 1, matrix, "right");
         }
       }
-      
 
       if (direction === "left") {
         if (
@@ -103,7 +102,7 @@ const removeIslands = (matrix) => {
         for (row; row > 1; row--) {
           testAdjacent(col, row, matrix, "top");
           testAdjacent(col, row, matrix, "bottom");
-          
+
           if (
             matrix[col][row - 1] === 1 &&
             adjacent[col].indexOf(row - 1) in adjacent[col] === false
@@ -125,7 +124,10 @@ const removeIslands = (matrix) => {
       //      check for leftBorder    //
       if (matrix[col][0] === 1) {
         // check if there's a [1] to it's right
-        if (matrix[col][1] === 1) {
+        if (
+          matrix[col][1] === 1 &&
+          adjacent[col].indexOf(1) in adjacent[col] === false
+        ) {
           adjacent[col].push(1);
           checkAdjacent(col, 1, matrix, "right");
         }
@@ -134,7 +136,10 @@ const removeIslands = (matrix) => {
       //          check for rightBorder       //
       if (matrix[col][rowLength - 1] === 1) {
         // check if there's a [1] to it's left
-        if (matrix[col][rowLength - 2] === 1) {
+        if (
+          matrix[col][rowLength - 2] === 1 &&
+          adjacent[col].indexOf(rowLength - 2) in adjacent[col] === false
+        ) {
           adjacent[col].push(rowLength - 2);
           checkAdjacent(col, rowLength - 2, matrix, "left");
         }
@@ -160,20 +165,21 @@ const removeIslands = (matrix) => {
     }
   }
   //                     END                        //
+  adjacent;
   return matrix;
 };
 
 // 5x5
-let matrix = [
-  [0, 1, 1, 1, 1],
-  [1, 1, 0, 0, 0],
-  [0, 1, 0, 1, 0],
-  [0, 0, 0, 1, 0],
-  [1, 0, 0, 1, 0],
-];
+// let matrix = [
+//   [0, 1, 1, 1, 1],
+//   [1, 1, 0, 0, 0],
+//   [0, 1, 0, 1, 0],
+//   [0, 0, 0, 1, 0],
+//   [1, 0, 0, 1, 0],
+// ];
 
 // let matrix = [
-//   [0, 1, 0, 1, 0, 0]
+// [0, 1, 0, 1, 0, 0]
 // ]
 
 // let matrix = [
@@ -181,15 +187,15 @@ let matrix = [
 // ]
 
 // 7x7
-// let matrix = [
-  // [1, 1, 0, 0, 0, 0, 0],
-  // [0, 1, 0, 0, 0, 0, 0],
-  // [0, 1, 1, 1, 0, 0, 0],
-  // [0, 0, 0, 1, 1, 0, 0],
-  // [0, 0, 0, 0, 1, 0, 0],
-  // [0, 0, 0, 0, 1, 1, 0],
-  // [0, 0, 0, 0, 0, 0, 0],
-// ];
+let matrix = [
+  [1, 1, 0, 1, 0, 1, 0],
+  [0, 1, 0, 0, 1, 1, 0],
+  [0, 1, 1, 1, 0, 0, 0],
+  [1, 0, 0, 1, 1, 1, 0],
+  [0, 1, 1, 0, 1, 0, 0],
+  [0, 1, 1, 0, 1, 1, 1],
+  [1, 0, 1, 1, 0, 0, 0],
+];
 
 // 10x10
 // let matrix = [
@@ -205,5 +211,5 @@ let matrix = [
 //   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 // ];
 
-                console.log(matrix)
+console.log(matrix);
 console.log(removeIslands(matrix));
