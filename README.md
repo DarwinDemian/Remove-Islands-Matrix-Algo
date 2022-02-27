@@ -1,4 +1,4 @@
-# Remove Islands - Matrix Algorithm
+# Remove Islands - Matrix Algorithm O(n * m)
 
 Algorithm made for a intermediate Google interview challenge.
 
