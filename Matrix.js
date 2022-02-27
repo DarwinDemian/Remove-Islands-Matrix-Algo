@@ -1,16 +1,21 @@
 const removeIslands = (matrix) => {
+  // Object to hold all adjacent 1s positions
+  // prefix: { col: [row] }
   let adjacent = {};
 
   let colLength = matrix.length;
   let rowLength = matrix[0].length;
 
-  // add every column to adjacent //
+  // Add every column to adjacent //
   for (let col = 0; col < colLength; col++) {
     adjacent[col] = [];
   }
-  //          END             //
 
-  const checkAdjacent = (col, row, matrix, direction) => {
+  // Starting from each 1 found in a border
+  // Check/move through the array looking for adjacents 1s to that border
+  const checkAdjacent = (col, row, matrix, direction) => {  
+    
+    // Check for adjacents and call the necessary move function
     const testAdjacent = (col, row, matrix, direction) => {
       if (direction === "right") {
         if (
@@ -55,6 +60,10 @@ const removeIslands = (matrix) => {
       }
     };
 
+    // Call testAdjacent to check for adjacent 1s in other directions 
+    // move through the matrix in the necessary direction
+    // until you've reached the end of the column or
+    // there's no more adjacent 1s
     const moveTopBot = (col, row, matrix, direction) => {
       if (direction === "top") {
         for (col; colLength > col; col--) {
@@ -85,6 +94,10 @@ const removeIslands = (matrix) => {
       }
     };
 
+    // Call testAdjacent to check for adjacent 1s in other directions 
+    // move through the matrix in the necessary direction
+    // until you've reached the end of the row or
+    // there's no more adjacent 1s
     const moveRow = (col, row, matrix, direction) => {
       if (direction === "right") {
         for (row; row < rowLength - 2; row++) {
@@ -113,17 +126,17 @@ const removeIslands = (matrix) => {
       }
     };
 
+    // Start the search
     const initialize = () => moveRow(col, row, matrix, direction);
     initialize();
   };
 
-  // check every border      //
+  // Check every border      //
   const isBorder = (matrix) => {
     for (let col = 0; col < colLength; col++) {
-      // check each border and search for each adjacent //
-      //      check for leftBorder    //
+      // Check for leftBorder
       if (matrix[col][0] === 1) {
-        // check if there's a [1] to it's right
+        // Check if there's a 1 to it's right
         if (
           matrix[col][1] === 1 &&
           adjacent[col].indexOf(1) in adjacent[col] === false
@@ -133,9 +146,9 @@ const removeIslands = (matrix) => {
         }
       }
 
-      //          check for rightBorder       //
+      // Check for rightBorder
       if (matrix[col][rowLength - 1] === 1) {
-        // check if there's a [1] to it's left
+        // Check if there's a 1 to it's left
         if (
           matrix[col][rowLength - 2] === 1 &&
           adjacent[col].indexOf(rowLength - 2) in adjacent[col] === false
@@ -144,16 +157,16 @@ const removeIslands = (matrix) => {
           checkAdjacent(col, rowLength - 2, matrix, "left");
         }
       }
-
-      //                  END                          //
     }
   };
 
+  // Start search from each border
   const initializeSearch = () => isBorder(matrix);
   initializeSearch();
 
-  //  check for each [1] that's not in adjacent    //
-  //  skips every first and last number in matrix  //
+  // Check for each [1] that's not in adjacent
+  // and convert it to [0]
+  // Skip every first and last number in matrix  
   for (let col = 0; col < colLength; col++) {
     for (let row = 1; row < rowLength - 1; row++) {
       if (
@@ -164,9 +177,11 @@ const removeIslands = (matrix) => {
       }
     }
   }
-  //                     END                        //
+
   return matrix;
 };
+
+// TEST CASES
 
 // 5x5
 // let matrix = [
@@ -210,5 +225,7 @@ let matrix = [
 //   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 // ];
 
+// Original Matrix
 console.log(matrix);
+// New Matrix
 console.log(removeIslands(matrix));
