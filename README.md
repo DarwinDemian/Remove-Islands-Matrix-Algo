@@ -48,3 +48,6 @@ Auxiliary diagram to explain the logic behind the algorithm:
 
 
 You can run the code with `node Matrix.js` and you'll see the original matrix and the new matrix. You can check for different test cases by commenting/uncommenting the matrix variables at the end of the code.
+
+See the code running online here:
+https://jsfiddle.net/Demian6662/50gwzna9/3/
