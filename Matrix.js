@@ -4,7 +4,7 @@ const removeIslands = (matrix) => {
   let colLength = matrix.length;
   let rowLength = matrix[0].length;
 
-  // add every col to adjacent //
+  // add every column to adjacent //
   for (let col = 0; col < colLength; col++) {
     adjacent[col] = [];
   }
@@ -18,7 +18,7 @@ const removeIslands = (matrix) => {
           adjacent[col].indexOf(row + 1) in adjacent[col] === false
         ) {
           adjacent[col].push(row + 1);
-          checkRow(col, row + 1, matrix, "right");
+          moveRow(col, row + 1, matrix, "right");
         }
       }
       
@@ -29,7 +29,7 @@ const removeIslands = (matrix) => {
           adjacent[col].indexOf(row - 1) in adjacent[col] === false
         ) {
           adjacent[col].push(row - 1);
-          checkRow(col, row - 1, matrix, "left");
+          moveRow(col, row - 1, matrix, "left");
         }
       }
 
@@ -40,7 +40,7 @@ const removeIslands = (matrix) => {
           adjacent[col - 1].indexOf(row) in adjacent[col] === false
         ) {
           adjacent[col - 1].push(row);
-          checkTopBot(col - 1, row, matrix, "top");
+          moveTopBot(col - 1, row, matrix, "top");
         }
       }
 
@@ -51,12 +51,12 @@ const removeIslands = (matrix) => {
           adjacent[col + 1].indexOf(row) in adjacent[col] === false
         ) {
           adjacent[col + 1].push(row);
-          checkTopBot(col + 1, row, matrix, "bottom");
+          moveTopBot(col + 1, row, matrix, "bottom");
         }
       }
     };
 
-    const checkTopBot = (col, row, matrix, direction) => {
+    const moveTopBot = (col, row, matrix, direction) => {
       if (direction === "top") {
         for (col; colLength > col; col--) {
           testAdjacent(col, row, matrix, "left");
@@ -86,7 +86,7 @@ const removeIslands = (matrix) => {
       }
     };
 
-    const checkRow = (col, row, matrix, direction) => {
+    const moveRow = (col, row, matrix, direction) => {
       if (direction === "right") {
         for (row; row < rowLength - 2; row++) {
           testAdjacent(col, row, matrix, "top");
@@ -114,7 +114,7 @@ const removeIslands = (matrix) => {
       }
     };
 
-    const initialize = () => checkRow(col, row, matrix, direction);
+    const initialize = () => moveRow(col, row, matrix, direction);
     initialize();
   };
 
@@ -165,15 +165,15 @@ const removeIslands = (matrix) => {
 
 // 5x5
 let matrix = [
-  [0, 0, 1, 1, 1],
+  [0, 1, 1, 1, 1],
   [1, 1, 0, 0, 0],
-  [0, 1, 1, 0, 0],
-  [0, 1, 0, 1, 1],
+  [0, 1, 0, 1, 0],
+  [0, 0, 0, 1, 0],
   [1, 0, 0, 1, 0],
 ];
 
 // let matrix = [
-  // [0, 1, 0, 1, 0, 0]
+//   [0, 1, 0, 1, 0, 0]
 // ]
 
 // let matrix = [
@@ -205,5 +205,5 @@ let matrix = [
 //   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 // ];
 
-console.log(matrix)
+                console.log(matrix)
 console.log(removeIslands(matrix));
