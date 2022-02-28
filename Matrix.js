@@ -1,3 +1,17 @@
+// YES, this code is kind of jank and I felt the need to do a lot of documentation but as a great man would put it:
+// “It’s not a tumor! It’s not a tumor, at all.”
+// - Arnold Schwarzenegger, Kindergarten Cop
+
+// CODE RUNDOWN
+// 1st: isBorder is called and it checks for 1s found in each border, if there's an adjacent it calls
+// 2nd: checkAdjacent which checks/move through each adjacent found in matrix
+// 3rd: moveRow is called and it calls testAdjacent in the possible directions, after it is done, it is gonna proceed with the current move function 
+// 4th: testAdjacent will check for adjacents in the direction passed to it and it will call the necessary move function 
+// 5th: the move/check process is repeated until all adjacent are found and pushed to the adjacent object
+// 6th: a for loop goes through the array and converts every 1 that's not in adjacent to a 0
+
+// Refer to the diagram for more clearity
+
 const removeIslands = (matrix) => {
   // Object to hold all adjacent 1s positions
   // prefix: { col: [row] }
@@ -62,7 +76,7 @@ const removeIslands = (matrix) => {
 
     // Call testAdjacent to check for adjacent 1s in other directions 
     // move through the matrix in the necessary direction
-    // until you've reached the end of the column or
+    // until you've reached the end of the column/row or
     // there's no more adjacent 1s
     const moveTopBot = (col, row, matrix, direction) => {
       if (direction === "top") {
@@ -94,10 +108,6 @@ const removeIslands = (matrix) => {
       }
     };
 
-    // Call testAdjacent to check for adjacent 1s in other directions 
-    // move through the matrix in the necessary direction
-    // until you've reached the end of the row or
-    // there's no more adjacent 1s
     const moveRow = (col, row, matrix, direction) => {
       if (direction === "right") {
         for (row; row < rowLength - 2; row++) {
