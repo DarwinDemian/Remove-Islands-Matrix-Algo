@@ -1,20 +1,18 @@
-// YES, this code is kind of jank and I felt the need to do a lot of documentation but as a great man would put it:
+// YES, this code is kind of jank and I felt the need to write a bit too much documentation, but as a great man would put it:
 // “It’s not a tumor! It’s not a tumor, at all.”
 // - Arnold Schwarzenegger, Kindergarten Cop
 
-// CODE RUNDOWN
-// 1st: isBorder is called and it checks for 1s found in each border, if there's an adjacent it calls
-// 2nd: checkAdjacent which checks/move through each adjacent found in matrix
-// 3rd: moveRow is called and it calls testAdjacent in the possible directions, after it is done, it is gonna proceed with the current move function 
-// 4th: testAdjacent will check for adjacents in the direction passed to it and it will call the necessary move function 
-// 5th: the move/check process is repeated until all adjacent are found and pushed to the adjacent object
-// 6th: a for loop goes through the array and converts every 1 that's not in adjacent to a 0
+// FUNCTION CALL RUNDOWN
+// isBorder calls checkAdjacent if there's an adjacent 1 in a border
+// checkAdjacent calls moveRow which first calls testAdjacent to check 1s in other directions and then moveRow can proceed to check its current row
+// testAdjacent calls the necessary move functions and the process repeats until there's no more adjacent 1s
+// in the end, a nested for loop goes through the matrix converting every 1 not found in the adjacent object
 
 // Refer to the diagram for more clearity
 
 const removeIslands = (matrix) => {
   // Object to hold all adjacent 1s positions
-  // prefix: { col: [row] }
+  // with col as key and [row] as value
   let adjacent = {};
 
   let colLength = matrix.length;
@@ -141,7 +139,7 @@ const removeIslands = (matrix) => {
     initialize();
   };
 
-  // Check every border      //
+  // Check every border
   const isBorder = (matrix) => {
     for (let col = 0; col < colLength; col++) {
       // Check for leftBorder
@@ -174,7 +172,7 @@ const removeIslands = (matrix) => {
   const initializeSearch = () => isBorder(matrix);
   initializeSearch();
 
-  // Check for each [1] that's not in adjacent
+  // Check for every [1] that's not in adjacent
   // and convert it to [0]
   // Skip every first and last number in matrix  
   for (let col = 0; col < colLength; col++) {
