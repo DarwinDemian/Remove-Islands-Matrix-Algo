@@ -44,7 +44,7 @@ Example of all removed 1s:
 ```
 
 Auxiliary diagram to explain the logic behind the algorithm:
-![diagram](https://github.com/DarwinDemian/Remove-Islands-Matrix-Algo/blob/f44f608ebd0ce994b91656dbb12d054562f448ba/Matrix-Diagram.jpg)
+![diagram](https://github.com/DarwinDemian/Remove-Islands-Matrix-Algo/blob/28c23e7bfc1172dbf23571f80b52437ca927603c/Matrix-Diagram.jpg)
 
 
 You can run the code with `node Matrix.js` and you'll see the original matrix and the new matrix. You can check for different test cases by commenting/uncommenting the matrix variables at the end of the code.
