@@ -19,27 +19,23 @@ const removeIslands = (matrix) => {
   const isBorder = () => {
     for (let col = 0; col < colLength; col++) {
       // Check for leftBorder
-      if (matrix[col][0] === 1) {
-        // Check if there's a 1 to it's right
-        if (
-          matrix[col][1] === 1 &&
-          adjacent[col].indexOf(1) in adjacent[col] === false
-        ) {
-          adjacent[col].push(1);
-          moveRow(col, 1, "right");
-        }
+      if (
+        matrix[col][0] === 1 &&
+        matrix[col][1] === 1 &&
+        adjacent[col].indexOf(1) in adjacent[col] === false
+      ) {
+        adjacent[col].push(1);
+        moveRow(col, 1, "right");
       }
 
       // Check for rightBorder
-      if (matrix[col][rowLength - 1] === 1) {
-        // Check if there's a 1 to it's left
-        if (
-          matrix[col][rowLength - 2] === 1 &&
-          adjacent[col].indexOf(rowLength - 2) in adjacent[col] === false
-        ) {
-          adjacent[col].push(rowLength - 2);
-          moveRow(col, rowLength - 2, "left");
-        }
+      if (
+        matrix[col][rowLength - 1] === 1 &&
+        matrix[col][rowLength - 2] === 1 &&
+        adjacent[col].indexOf(rowLength - 2) in adjacent[col] === false
+      ) {
+        adjacent[col].push(rowLength - 2);
+        moveRow(col, rowLength - 2, "left");
       }
     }
   };
@@ -74,7 +70,6 @@ const removeIslands = (matrix) => {
       }
     }
   };
-
 
   const moveTopBot = (col, row, direction) => {
     if (direction === "top") {
@@ -175,11 +170,11 @@ const removeIslands = (matrix) => {
 
 // 5x5
 // let matrix = [
-  // [0, 1, 0, 1, 1],
-  // [0, 1, 1, 1, 0],
-  // [0, 0, 0, 0, 0],
-  // [0, 1, 1, 1, 0],
-  // [1, 1, 1, 1, 0],
+// [0, 1, 0, 1, 1],
+// [0, 1, 1, 1, 0],
+// [0, 0, 0, 0, 0],
+// [0, 1, 1, 1, 0],
+// [1, 1, 1, 1, 0],
 // ];
 
 // 5x5
