@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-02-28T23:05:12.723Z" agent="5.0 (X11)" version="16.6.4" etag="9FyJkukiobr3ES2iqrdS" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-02T08:11:22.722Z" agent="5.0 (X11)" etag="woCBoT7HxTKQJSTCq6vO" version="16.6.4" type="github">
   <diagram id="b0WUG2JRhef8yC1o2ehy" name="Page-1">
-    <mxGraphModel dx="1673" dy="888" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="700" pageHeight="1000" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="755" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="700" pageHeight="1000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -24,8 +24,10 @@
         <mxCell id="23" value="TRUE" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;arcSize=25;" parent="1" vertex="1">
           <mxGeometry x="304.37" y="640" width="85.01" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Fx6Pj6lUry02TNKDpeIH-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="31" target="54">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="Fx6Pj6lUry02TNKDpeIH-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="31" target="66" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="553.75" y="342.5" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="31" value="Add adjacent 1 to adjacent[col]" style="whiteSpace=wrap;html=1;fontSize=19;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="286.87" y="681" width="120.01" height="70" as="geometry" />
@@ -60,25 +62,18 @@
         <mxCell id="28" value="&amp;amp;&amp;amp;" style="shape=or;whiteSpace=wrap;html=1;fontSize=19;rotation=90;" parent="50" vertex="1">
           <mxGeometry x="78.60000000000002" y="122.72000000000003" width="36.56" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="53" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="553.75" y="310" width="160" height="160" as="geometry" />
+        <mxCell id="78" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=19;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580.0000000000005" y="675" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="68" value="" style="group" parent="53" vertex="1" connectable="0">
-          <mxGeometry width="130" height="130" as="geometry" />
+        <mxCell id="101" value="&lt;span&gt;Loop through Matrix &amp;amp; convert every 1 that&#39;s not in adjacent to a 0&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;fillColor=#FAFAFA;" parent="1" vertex="1">
+          <mxGeometry x="590" y="45" width="200" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="54" value="&lt;span style=&quot;font-size: 19px&quot;&gt;Move Row&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;align=center;" parent="68" vertex="1">
-          <mxGeometry width="130" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="55" value="Direction" style="rounded=0;whiteSpace=wrap;html=1;fontSize=19;fillColor=#FAFAFA;" parent="68" vertex="1">
-          <mxGeometry x="5" y="65" width="120" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="62" value="Check and move through matrix while there&#39;s an adjacent 1, according to&lt;br&gt;&amp;nbsp;Direction" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;fillColor=#FAFAFA;" parent="1" vertex="1">
-          <mxGeometry x="530" y="470" width="177.5" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="63" style="edgeStyle=none;html=1;fontSize=19;" parent="1" source="54" target="62" edge="1">
+        <mxCell id="Fx6Pj6lUry02TNKDpeIH-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="2" target="101" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="67" value="" style="edgeStyle=none;html=1;fontSize=19;" parent="1" source="54" target="66" edge="1">
+        <mxCell id="Fx6Pj6lUry02TNKDpeIH-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="27" target="23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="83" value="" style="edgeStyle=none;html=1;fontSize=19;" parent="1" source="74" target="82" edge="1">
@@ -86,31 +81,23 @@
         </mxCell>
         <mxCell id="90" style="edgeStyle=none;html=1;fontSize=19;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="74" target="92" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1159.9999999999995" y="600.0000000000002" as="targetPoint" />
+            <mxPoint x="964.9999999999995" y="740.0000000000002" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="74" value="Check if there&#39;s an adjacent 1 and call move functions according to&lt;br&gt;&amp;nbsp;Direction" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;fillColor=#FAFAFA;" parent="1" vertex="1">
-          <mxGeometry x="725" y="475" width="167.5" height="140" as="geometry" />
+          <mxGeometry x="530" y="615" width="167.5" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="75" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="743.75" y="310" width="130" height="130" as="geometry" />
+        <mxCell id="66" value="&lt;span style=&quot;font-size: 19px&quot;&gt;Test Adjacent&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;align=center;" parent="1" vertex="1">
+          <mxGeometry x="548.75" y="450" width="130" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="66" value="&lt;span style=&quot;font-size: 19px&quot;&gt;Test Adjacent&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;align=center;" parent="75" vertex="1">
-          <mxGeometry width="130" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="73" value="Direction" style="rounded=0;whiteSpace=wrap;html=1;fontSize=19;fillColor=#FAFAFA;" parent="75" vertex="1">
-          <mxGeometry x="5" y="60" width="120" height="30" as="geometry" />
+        <mxCell id="73" value="Direction" style="rounded=0;whiteSpace=wrap;html=1;fontSize=19;fillColor=#FAFAFA;" parent="1" vertex="1">
+          <mxGeometry x="553.75" y="510" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="76" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=19;" parent="1" source="66" target="74" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="78" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=19;" parent="1" target="77" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="580.0000000000005" y="675" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="84" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="933.75" y="400" width="160" height="160" as="geometry" />
+          <mxGeometry x="738.75" y="540" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="82" value="TRUE" style="whiteSpace=wrap;html=1;fontSize=19;fillColor=#FAFAFA;rounded=1;" parent="84" vertex="1">
           <mxGeometry x="25" y="125" width="80" height="35" as="geometry" />
@@ -119,7 +106,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="85" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="933.75" y="310" width="130" height="130" as="geometry" />
+          <mxGeometry x="738.75" y="450" width="130" height="130" as="geometry" />
         </mxCell>
         <mxCell id="86" value="&lt;span style=&quot;font-size: 19px&quot;&gt;Move Direction&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;align=center;" parent="85" vertex="1">
           <mxGeometry width="130" height="130" as="geometry" />
@@ -131,24 +118,15 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="91" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="933.75" y="455" width="160" height="160" as="geometry" />
+          <mxGeometry x="738.75" y="595" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="92" value="FALSE" style="whiteSpace=wrap;html=1;fontSize=19;fillColor=#FAFAFA;rounded=1;" parent="91" vertex="1">
           <mxGeometry x="25" y="125" width="80" height="35" as="geometry" />
         </mxCell>
         <mxCell id="93" value="STOP" style="whiteSpace=wrap;html=1;fontSize=19;fillColor=#FAFAFA;rounded=1;" parent="1" vertex="1">
-          <mxGeometry x="1063.7499999999998" y="576.25" width="70" height="43.75" as="geometry" />
+          <mxGeometry x="868.7499999999998" y="716.25" width="70" height="43.75" as="geometry" />
         </mxCell>
         <mxCell id="94" value="" style="edgeStyle=none;html=1;fontSize=19;" parent="1" source="92" target="93" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="101" value="&lt;span&gt;Loop through Matrix &amp;amp; convert every 1 that&#39;s not in adjacent to a 0&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;fillColor=#FAFAFA;" parent="1" vertex="1">
-          <mxGeometry x="707.5" y="45" width="200" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="Fx6Pj6lUry02TNKDpeIH-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2" target="101">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="Fx6Pj6lUry02TNKDpeIH-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="27" target="23">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
