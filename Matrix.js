@@ -1,4 +1,4 @@
-// YES, this code is kind of jank but as a great man would put it:
+// YES, this code is kind of jank and I'm working on it, but as a great man would put it:
 // “It’s not a tumor! It’s not a tumor, at all.”
 // - Arnold Schwarzenegger, Kindergarten Cop
 
