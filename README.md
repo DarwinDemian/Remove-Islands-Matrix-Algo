@@ -10,41 +10,41 @@ Sample Input:
   [1, 1, 0, 1, 0, 1, 0],
   [0, 1, 0, 0, 1, 1, 0],
   [0, 1, 1, 1, 0, 0, 0],
-  [1, 0, 0, 1, 1, 1, 0],
+  [1, 0, 0, 0, 1, 1, 0],
   [0, 1, 1, 0, 1, 0, 0],
-  [0, 1, 1, 0, 1, 1, 1],
-  [1, 0, 1, 1, 0, 0, 0],
+  [0, 1, 1, 0, 0, 1, 0],
+  [1, 0, 0, 0, 0, 1, 1],
 ]
 ```
 
 Sample Output:
 ```javascript
 [ 
-  [ 1, 1, 0, 0, 0, 0, 0 ],
-  [ 0, 1, 0, 0, 0, 0, 0 ],
+  [ 1, 1, 0, 1, 0, 1, 0 ],
+  [ 0, 1, 0, 0, 1, 1, 0 ],
   [ 0, 1, 1, 1, 0, 0, 0 ],
-  [ 1, 0, 0, 1, 1, 1, 0 ],
-  [ 0, 0, 0, 0, 1, 0, 0 ],
-  [ 0, 0, 0, 0, 1, 1, 1 ],
-  [ 1, 0, 0, 0, 0, 0, 0 ] 
+  [ 1, 0, 0, 0, 0, 0, 0 ],
+  [ 0, 0, 0, 0, 0, 0, 0 ],
+  [ 0, 0, 0, 0, 0, 1, 0 ],
+  [ 1, 0, 0, 0, 0, 1, 1 ] 
 ]
 ```
 
 Example of all removed 1s:
 ```javascript
 [
-  [ ,  ,  , 1,  , 1,  ],
+  [ ,  ,  ,  ,  ,  ,  ],
+  [ ,  ,  ,  ,  ,  ,  ],
+  [ ,  ,  ,  ,  ,  ,  ],
   [ ,  ,  ,  , 1, 1,  ],
-  [ ,  ,  ,  ,  ,  ,  ],
-  [ ,  ,  ,  ,  ,  ,  ],
+  [ , 1, 1,  , 1,  ,  ],
   [ , 1, 1,  ,  ,  ,  ],
-  [ , 1, 1,  ,  ,  ,  ],
-  [ ,  , 1, 1,  ,  ,  ],
+  [ ,  ,  ,  ,  ,  ,  ],
 ]
 ```
 
 Auxiliary diagram to explain the logic behind the algorithm:
-![diagram](https://github.com/DarwinDemian/Remove-Islands-Matrix-Algo/blob/28c23e7bfc1172dbf23571f80b52437ca927603c/Matrix-Diagram.jpg)
+![diagram](https://github.com/DarwinDemian/Remove-Islands-Matrix-Algo/blob/84fd3ea827a52fa55d8118e6d173e55f9ea2b17f/Matrix-Diagram.jpg)
 
 
 You can run the code with `node Matrix.js` and you'll see the original matrix and the new matrix. You can check for different test cases by commenting/uncommenting the matrix variables at the end of the code.
